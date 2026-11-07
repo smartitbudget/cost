@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IT Cost Optimization for FMCG and Oil &amp; Gas</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<style>
+:root{--bg:#f6f8f7;--surface:#fff;--ink:#12303a;--muted:#4d6670;--line:#d3dfdc;--brand:#0f6b6f;--on:#fff;--save:#1f8a5b;--soft:#e4f0ee;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1b20;--surface:#15272d;--ink:#e6f0ee;--muted:#9bb3ba;--line:#26414a;--brand:#4fc3c0;--on:#08262a;--save:#5fd69b;--soft:#1a3238;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1b20;--surface:#15272d;--ink:#e6f0ee;--muted:#9bb3ba;--line:#26414a;--brand:#4fc3c0;--on:#08262a;--save:#5fd69b;--soft:#1a3238;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;line-height:1.1;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+header{padding:48px 0 28px}
+h1{font-size:clamp(34px,5.5vw,58px);font-weight:800;letter-spacing:-.02em;max-width:18ch}
+header p{color:var(--muted);font-size:18px;max-width:60ch;margin:16px 0 0}
+section{padding:40px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(26px,3.5vw,36px);margin-bottom:8px}
+.intro{color:var(--muted);max-width:68ch;margin:0 0 20px}
+.tabs{display:flex;gap:8px;margin:0 0 18px;flex-wrap:wrap}
+.tabs button{font:500 16px "IBM Plex Sans",sans-serif;padding:10px 18px;border:2px solid var(--ink);background:transparent;color:var(--ink);border-radius:4px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--brand);color:var(--on);border-color:var(--brand)}
+.ctl{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;background:var(--surface);border:2px solid var(--ink);border-radius:6px;padding:18px;margin-bottom:18px}
+.ctl label{display:block;font-weight:500;font-size:14px;margin-bottom:4px}
+.ctl label b{float:right;color:var(--brand)}
+.ctl input[type=number]{width:100%;padding:8px 10px;font:inherit;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink)}
+.ctl input[type=range]{width:100%;accent-color:var(--brand)}
+.sum{display:flex;gap:28px;flex-wrap:wrap;margin:0 0 18px}
+.sum div{min-width:150px}
+.sum .n{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:32px}
+.sum .n.g{color:var(--save)}
+.sum .l{font-size:14px;color:var(--muted)}
+.scroll{overflow-x:auto;border:1px solid var(--line);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:980px;font-size:14.5px}
+th,td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:var(--soft);font-weight:500;position:sticky;top:0}
+td.num{text-align:right;white-space:nowrap}
+td.sv{color:var(--save);font-weight:500}
+td input{width:64px;padding:5px 6px;font:inherit;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink)}
+.note{font-size:13.5px;color:var(--muted);margin:10px 0 0}
+ol.plan{list-style:none;margin:0;padding:0 0 0 0;border-left:3px solid var(--brand)}
+ol.plan li{padding:0 0 22px 24px;position:relative}
+ol.plan li::before{content:"";position:absolute;left:-9px;top:5px;width:15px;height:15px;border-radius:50%;background:var(--bg);border:3px solid var(--brand)}
+ol.plan h3{font-size:19px}
+ol.plan p{margin:4px 0 0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.grid div{background:var(--soft);padding:16px;border-radius:4px}
+.grid h3{font-size:17px;margin-bottom:6px}
+.grid p{margin:0;font-size:14.5px;color:var(--muted)}
+footer{padding:28px 0 44px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Cut IT cost in FMCG and Oil &amp; Gas, step by step.</h1>
+  <p>Every IT component a company needs, the costly legacy option, the cheapest workable alternative, and a calculator where you set the savings percentage yourself.</p>
+</header>
+
+<section id="calc">
+  <h2>IT component cost comparison</h2>
+  <p class="intro">Pick an industry, set your company size, and edit the savings % on any row. Baseline costs are illustrative yearly figures for a company of 5,000 employees and scale with the size you enter.</p>
+  <div class="tabs" role="group" aria-label="Industry">
+    <button id="t-fmcg" aria-pressed="true">FMCG company</button>
+    <button id="t-oil" aria-pressed="false">Oil &amp; Gas company</button>
+  </div>
+  <div class="ctl">
+    <div><label for="emp">Employees</label><input id="emp" type="number" min="100" step="100" value="5000"></div>
+    <div><label for="ag">Savings ambition (scales every row) <b id="agV"></b></label><input id="ag" type="range" min="40" max="150" value="100"></div>
+    <div><label for="risk">Share of changes you will adopt <b id="riskV"></b></label><input id="risk" type="range" min="10" max="100" value="70"></div>
+  </div>
+  <div class="sum" aria-live="polite">
+    <div><div class="n" id="s-base"></div><div class="l">Current yearly IT spend</div></div>
+    <div><div class="n g" id="s-save"></div><div class="l">Yearly saving</div></div>
+    <div><div class="n g" id="s-pct"></div><div class="l">Reduction in total</div></div>
+  </div>
+  <div class="scroll"><table>
+    <thead><tr><th>IT component</th><th>Legacy / costliest option</th><th>Cheapest workable model or device</th><th class="num">Current cost ($K/yr)</th><th>Saving %</th><th class="num">Saving ($K/yr)</th><th>Advantages and sustainability</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table></div>
+  <p class="note">All numbers are planning estimates, not quotes. Safety-critical plant systems (SIS, DCS safety layers, explosion-proof certified equipment) should keep certified products; savings come from the surrounding layers.</p>
+</section>
+
+<section id="approach">
+  <h2>A sustainable approach</h2>
+  <p class="intro">Cheap only counts if it lasts. Use this order so savings hold and e-waste, energy use, and risk go down together.</p>
+  <ol class="plan">
+    <li><h3>Inventory and tag every asset</h3><p>List hardware, licenses, cloud accounts, and contracts with owner, cost, age, and renewal date.</p></li>
+    <li><h3>Remove waste before replacing anything</h3><p>Switch off idle servers, reclaim unused licenses, and consolidate duplicate tools. This costs almost nothing.</p></li>
+    <li><h3>Extend life, then refurbish, then replace</h3><p>Move laptops from 3 to 5 years, redeploy good devices to lighter roles, and buy refurbished where warranty is available.</p></li>
+    <li><h3>Move to shared and efficient platforms</h3><p>Cloud with committed pricing, virtualization, and energy-efficient devices cut both power bills and carbon.</p></li>
+    <li><h3>Pilot in one plant or region first</h3><p>Prove the saving on a small scale, then copy it. Keep a rollback plan for each change.</p></li>
+    <li><h3>Track cost and carbon monthly</h3><p>Report cost per user, energy per workload, and devices recycled. Adjust the percentages in the table with real results.</p></li>
+  </ol>
+</section>
+
+<section id="adv">
+  <h2>Why this works</h2>
+  <div class="grid">
+    <div><h3>Lower running cost</h3><p>Fewer licenses, less hardware, and smaller support teams cut the bill year after year.</p></div>
+    <div><h3>Lower energy and e-waste</h3><p>Fewer servers and longer device life mean less electricity and fewer discarded devices.</p></div>
+    <div><h3>Faster to change</h3><p>Cloud and mobile tools roll out to new plants and distributors in days, not months.</p></div>
+    <div><h3>Less vendor lock-in</h3><p>Open standards and open-source tools give you leverage at every renewal.</p></div>
+  </div>
+</section>
+
+<footer>Educational guide with illustrative figures. Check current prices and certifications with vendors before you decide.</footer>
+</div>
+
+<script>
+var D={
+fmcg:[
+["ERP (finance, sales, supply)","On-premise SAP ECC or heavily customized ERP","Cloud ERP such as SAP S/4HANA Cloud, Dynamics 365 Business Central, or open-source Odoo",2400,30,"No hardware to run, faster upgrades, pay for users you have"],
+["Demand planning and supply chain","Legacy planning suites with custom interfaces","Cloud planning module of your ERP, or Azure ML / Python forecasting",900,25,"Better forecasts cut stock and waste; fewer licenses"],
+["Distributor and sales force app","On-premise DMS with rugged handhelds ($800+)","Android app on low-cost phones ($120 to $200) with SaaS DMS",700,40,"Cheap devices, real-time orders, easy replacement"],
+["Warehouse management and scanners","Rugged RF scanners ($1,500+) with legacy WMS","Android scanning phones or $400 scanner sleeves with cloud WMS",500,30,"Lower device cost, fast training, same barcode accuracy"],
+["Data center and servers","Own servers, SAN storage, and a second site","Cloud VMs with reserved pricing, or small hyperconverged cluster",1500,35,"Less power and cooling; pay for what runs"],
+["Plant systems (MES, SCADA)","Proprietary MES with per-seat licenses","Server-licensed platforms such as Ignition or open-source MES",800,25,"Unlimited users, less lock-in, standard hardware"],
+["Network and WAN","MPLS links and old wired switches","SD-WAN over broadband and Wi-Fi 6 (Ubiquiti, TP-Link Omada)",600,40,"Lower line rental, central control, less power"],
+["Laptops and desktops","Premium laptops on a 3-year refresh","Mid-range laptops, Chromebooks, or thin clients on a 5-year life",1200,30,"Lower price and e-waste; refurbished option"],
+["Email and office tools","Perpetual Office with on-premise Exchange","Microsoft 365 Business or Google Workspace",500,30,"No mail servers, built-in collaboration, easy scaling"],
+["Cybersecurity","Many separate point products","Consolidated platform plus open-source monitoring such as Wazuh",600,25,"Fewer agents, one dashboard, lower overlap"],
+["Reporting and analytics","Legacy BI licenses","Power BI, Metabase, or Apache Superset",400,45,"Low per-user price, self-service reports"],
+["Backup and disaster recovery","Tape libraries and a standby data center","Cloud object storage with immutable backups",350,40,"Cheaper storage, tested restores, ransomware protection"],
+["Phones and printing","Desk phones, PBX, and per-site printers","Teams or VoIP calling, managed print with digital forms",450,45,"Fewer devices to buy, power, and recycle"]
+],
+oil:[
+["ERP and finance","On-premise SAP ECC with custom code","Cloud ERP with standard processes",3000,25,"Easier upgrades, less custom code to maintain"],
+["Supervisory control (SCADA, DCS)","Proprietary DCS with per-tag licenses","Open-architecture SCADA such as Ignition for the supervisory layer",1500,20,"Lower license cost; keep certified safety layers unchanged"],
+["Process data historian","OSIsoft PI or similar per-tag licensing","TimescaleDB, InfluxDB, or Ignition historian",700,40,"No per-tag fees, open data access, cloud-ready"],
+["Remote site connectivity","Traditional VSAT contracts","LEO satellite terminals and private LTE",1200,45,"Lower monthly fee, higher speed, quick installation"],
+["Rugged field devices","Explosion-proof tablets ($3,000+) everywhere","Ex-certified phones only in hazardous zones; standard rugged phones elsewhere",600,30,"Pay for certification only where required"],
+["Subsurface and engineering software","Large perpetual licenses for geology and reservoir tools","Pay-per-use cloud licensing and open tools such as OpenDTect",1800,30,"License only active users and projects"],
+["Seismic and simulation computing","Large on-premise HPC cluster","Cloud burst and spot instances for peak jobs",2000,40,"No idle cluster, less power and cooling"],
+["Maintenance management (CMMS)","On-premise Maximo or SAP PM","SaaS CMMS with mobile work orders",700,30,"Fewer servers, work done on mobile, fewer paper forms"],
+["Data center and servers","Own data centers with SAN","Cloud VMs with reserved pricing and virtualization",1800,35,"Lower energy and floor space"],
+["Corporate and OT network","MPLS and flat OT networks","SD-WAN with segmented OT zones",800,35,"Cheaper links and a safer network design"],
+["Operational cybersecurity","Multiple OT security appliances","Consolidated OT monitoring platform, fewer tools",900,20,"Lower overlap while keeping protection strong"],
+["Equipment condition monitoring","Wired sensors and manual rounds","Wireless IIoT vibration and temperature sensors",600,40,"Less cabling, earlier fault detection, fewer trips"],
+["Site inspection","Manned helicopter or scaffold inspection","Drones with cloud image analysis",500,50,"Lower cost, safer for people, less fuel"],
+["Laptops, email, collaboration","Premium laptops, on-premise email","Mid-range laptops on a 5-year life, Microsoft 365 or Google Workspace",1000,30,"Lower price and fewer servers"]
+]};
+var cur="fmcg",ov={};
+function $(i){return document.getElementById(i)}
+function money(k){return k>=1000?"$"+(k/1000).toFixed(2)+"M":"$"+Math.round(k)+"K"}
+function render(){
+  var emp=Math.max(100,+$("emp").value||5000),sc=emp/5000,ag=+$("ag").value/100,ad=+$("risk").value/100;
+  $("agV").textContent=Math.round(ag*100)+"%";$("riskV").textContent=Math.round(ad*100)+"%";
+  var tb="",base=0,sav=0;
+  D[cur].forEach(function(r,i){
+    var k=cur+i,pct=ov[k]!==undefined?ov[k]:Math.round(r[4]*ag);
+    var b=r[3]*sc,s=b*pct/100*ad;base+=b;sav+=s;
+    tb+="<tr><td><b>"+r[0]+"</b></td><td>"+r[1]+"</td><td>"+r[2]+"</td><td class='num'>"+money(b)+"</td><td><input type='number' min='0' max='90' value='"+pct+"' data-k='"+k+"' aria-label='Saving percent for "+r[0]+"'> %</td><td class='num sv'>"+money(s)+"</td><td>"+r[5]+"</td></tr>";
+  });
+  $("rows").innerHTML=tb;
+  $("s-base").textContent=money(base);$("s-save").textContent=money(sav);$("s-pct").textContent=(base?sav/base*100:0).toFixed(1)+"%";
+}
+$("rows").addEventListener("change",function(e){var k=e.target.getAttribute("data-k");if(k){ov[k]=Math.min(90,Math.max(0,+e.target.value||0));render()}});
+["emp","ag","risk"].forEach(function(i){$(i).addEventListener("input",function(){if(i==="ag")ov={};render()})});
+function pick(c){cur=c;ov={};$("t-fmcg").setAttribute("aria-pressed",c==="fmcg");$("t-oil").setAttribute("aria-pressed",c==="oil");render()}
+$("t-fmcg").onclick=function(){pick("fmcg")};$("t-oil").onclick=function(){pick("oil")};
+render();
+</script>
+</body>
+</html>
